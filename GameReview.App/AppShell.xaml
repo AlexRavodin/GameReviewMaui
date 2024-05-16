@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GameReview.App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:userDetails="clr-namespace:GameReview.App.Pages.UserDetails"
+    xmlns:signIn="clr-namespace:GameReview.App.Pages.SignIn"
+    xmlns:signUp="clr-namespace:GameReview.App.Pages.SignUp"
+    xmlns:gameDetails="clr-namespace:GameReview.App.Pages.GameDetails"
+    xmlns:gameList="clr-namespace:GameReview.App.Pages.GameList"
+    FlyoutBehavior="Disabled"
+    Title="GameReview.App"
+    NavBarIsVisible="False">
+    
+    <ShellContent
+        Title="Sign In"
+        ContentTemplate="{DataTemplate signIn:SignInView}"
+        Route="SignIn" />
+    
+    <ShellContent
+        Title="Sign Up"
+        ContentTemplate="{DataTemplate signUp:SignUpView}"
+        Route="SignUp" />
+    
+    <ShellContent
+        Title="User Details"
+        ContentTemplate="{DataTemplate userDetails:UserDetailsView}"
+        Route="UserDetails" />
+    
+    <ShellContent
+        Title="Game Details"
+        ContentTemplate="{DataTemplate gameDetails:GameDetailsView}"
+        Route="GameDetails" />
+    
+    <ShellContent
+        Title="Game List"
+        ContentTemplate="{DataTemplate gameList:GameListView}"
+        Route="GameList" />
+    
+</Shell>

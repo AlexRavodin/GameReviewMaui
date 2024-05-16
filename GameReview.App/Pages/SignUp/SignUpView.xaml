@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:signUp="clr-namespace:GameReview.App.Features.SignUp"
+             xmlns:link="using:GameReview.App.Shared.Link"
+             x:Class="GameReview.App.Pages.SignUp.SignUpView">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label FontSize="Large"
+                       Text="Sign Up"/>
+                <signUp:SignUpFormView BindingContext="{Binding SignUpFormViewModel}" />
+                <link:Link Text="Go To Sign In" 
+                           Route="//SignIn"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
